@@ -5,8 +5,9 @@
         :message="message"
         :closeAlert="closeAlert"
       />
-        <h3>Welcome To
-            <span> Vue Poll App</span>.
+        <h3 class="welcome">
+          Welcome To
+            <span class="app-name"> Vue Poll App</span>.
         </h3>
         <div class="todayDate">
             Today is
@@ -25,6 +26,7 @@
             class="btn btn-showPollForm"
             @click="showForm"
         >
+          <font-awesome-icon :icon="['fas', 'plus']" class="iconWhite"/>
             Create Poll
         </button>
         <div class="formContainer" v-if="isForm">
@@ -39,17 +41,8 @@
                         placeholder="Type your question here..."
                         class="px-3 py-3 placeholder-blueGray-300 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
                         required
+                        autocomplete="off"
                     >
-                </div>
-                <div class="form-group">
-                    <label for="description">Description (option)</label>
-                    <textarea
-                        class="px-3 py-3 placeholder-blueGray-300 relative bg-white rounded text-sm border-0 shadow outline-none focus:outline-none focus:ring w-full"
-                        id="description"
-                        name="description"
-                        v-model="formData.description"
-                        placeholder="Enter an introduction text..."
-                    />
                 </div>
                 <div class="form-group">
                   <label htmlFor="answer">Answer Options</label>
@@ -101,7 +94,6 @@ export default {
       formData: {
         id: '',
         title: '',
-        description: '',
         answer: [
           {
             option: '',
@@ -149,7 +141,6 @@ export default {
         this.formData = {
           id: parseInt(new Date().getTime().toString()),
           title: '',
-          description: '',
           answer: [
             {
               option: '',
@@ -191,12 +182,29 @@ export default {
 </script>
 
 <style>
+.welcome {
+  font-family: 'Girassol', cursive;
+  font-size: 27px;
+}
+.app-name {
+  color: blue;
+}
 .messagePoll{
     text-align: center;
     padding: 10px;
 }
+.todayDate {
+  font-size: 25px;
+}
 .today {
     color: green;
+}
+.PollCreated {
+  font-size: 20px;
+}
+.numberOfPollCreated {
+  font-size: 26px;
+  color: #207030;
 }
 .formContainer {
     box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.64);

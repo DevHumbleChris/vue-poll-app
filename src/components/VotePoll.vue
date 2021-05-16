@@ -27,7 +27,7 @@
             {{answer.option}}
           </label>
         </div>
-        <div class="flex justify-center">
+        <div class="flex justify-center buttonGroup">
           <router-link to="/" class="btn btn-back-polls-vote">
             Back To Polls
           </router-link>
@@ -95,5 +95,17 @@ export default {
 .warning {
   background: red;
   color: #fff;
+}
+.btn-back-polls-vote {
+  text-align: center;
+}
+.btn-back-polls-vote, .btn-cast-vote {
+  width: 100%;
+}
+.pollTitle {
+  font-family: 'Texturina', serif;
+}
+.pollID {
+  font-family: 'Chela One', cursive;
 }
 </style>

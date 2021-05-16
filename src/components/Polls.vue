@@ -3,7 +3,7 @@
     <div class="noPolls" v-if="polls.length == 0">
       No Polls Created, Please Try To Create A Poll.
       <div class="hint">
-        <div class="hintTitle">Hint:</div>
+        <div class="hintTitle">Notice:</div>
         Once You Have Created A Poll Don't Refresh The Page. If You happen To Refresh It, All The Created Polls Gets Lost (Polls Are Not Stored In The Database).
       </div>
     </div>
@@ -18,9 +18,11 @@
               <i>Time Created: {{timeCreated}} ago</i>
             </div>
             <router-link :to="`/${poll.id}/vote`" class="btn btn-vote">
+              <font-awesome-icon :icon="['fas', 'vote-yea']"/>
               Vote
             </router-link>
             <router-link :to="`/${poll.id}/results`" class="btn btn-results" :disabled="true">
+              <font-awesome-icon :icon="['fas', 'poll']"/>
               Results
             </router-link>
           </div>
@@ -93,6 +95,9 @@ export default {
   border-radius: 5px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.title {
+  font-family: 'Ubuntu', sans-serif;
 }
 .dateCreated {
   margin-bottom: 15px;

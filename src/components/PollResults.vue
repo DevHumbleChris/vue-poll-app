@@ -48,9 +48,10 @@
             </div>
           </li>
         </ul>
+      <div class="chartTitle">Doughnut Chart Data</div>
       <bar-chart :chartData="chartData" :options="options" class="chart"/>
       </div>
-      <div class="justify-center flex">
+      <div class="justify-center flex buttonGroup">
         <router-link to="/" class="btn btn-back-polls">
           Back To Polls
         </router-link>
@@ -145,9 +146,19 @@ export default {
 </script>
 
 <style>
+.PollResults {
+  position: relative;
+}
 .resultsTitle {
   text-align: center;
   font-size: 24px;
+  font-family: 'Texturina', serif;
+  margin-bottom: 10px;
+}
+.noOfPeopleVoted {
+  font-family: 'Chela One', cursive;
+  font-size: 24px;
+  margin-bottom: 15px;
 }
 .resultsWrapper {
   display: flex;
@@ -162,5 +173,39 @@ export default {
 }
 .castedNo {
   color: green;
+}
+.chartTitle {
+  position: absolute;
+  top: 100px;
+  right: 70px;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 25px;
+}
+@media screen and (max-width: 480px) {
+  .resultsWrapper {
+    flex-direction: column;
+  }
+  .pollResults {
+    width: 20.5rem;
+  }
+  .chart {
+    width: 20.5rem;
+  }
+  .chartTitle {
+    font-size: 25px;
+    top: 490px;
+    left: 30px;
+    right: 0px;
+  }
+  .noOfPeopleVoted {
+    text-align: center;
+  }
+  .buttonGroup {
+    flex-direction: column;
+  }
+  .btn-back-polls, .btn-vote-again {
+    width: 100%;
+    text-align: center;
+  }
 }
 </style>

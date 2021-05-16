@@ -1,16 +1,19 @@
 <template>
   <div class="Results">
     <PollResults/>
+    <Author/>
   </div>
 </template>
 
 <script>
 import PollResults from '@/components/PollResults.vue'
+import Author from '@/components/Author.vue'
 
 export default {
   name: 'Results',
   components: {
-    PollResults
+    PollResults,
+    Author
   }
 }
 </script>
@@ -26,5 +29,12 @@ export default {
   padding: 2rem;
   border-radius: 10px;
   margin-top: 2rem;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 480px) {
+  .Results {
+    width: 23rem;
+  }
 }
 </style>

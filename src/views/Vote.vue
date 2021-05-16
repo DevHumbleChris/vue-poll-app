@@ -1,16 +1,19 @@
 <template>
   <div class="Vote">
     <VotePoll/>
+    <Author/>
   </div>
 </template>
 
 <script>
 import VotePoll from '@/components/VotePoll.vue'
+import Author from '@/components/Author.vue'
 
 export default {
   name: 'Vote',
   components: {
-    VotePoll
+    VotePoll,
+    Author
   }
 }
 </script>
@@ -37,5 +40,11 @@ export default {
 .form-radio {
   padding: 10px;
   margin-top :7px;
+}
+
+@media screen and (max-width: 480px) {
+  .Vote {
+    width: 23rem;
+  }
 }
 </style>

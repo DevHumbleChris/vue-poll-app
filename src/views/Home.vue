@@ -2,17 +2,20 @@
   <div class="home">
       <div class="pollContainer">
         <MessagePoll/>
+        <Author/>
       </div>
   </div>
 </template>
 
 <script>
 import MessagePoll from '@/components/MessagePoll.vue'
+import Author from '@/components/Author.vue'
 
 export default {
   name: 'Home',
   components: {
-    MessagePoll
+    MessagePoll,
+    Author
   }
 }
 </script>
@@ -26,5 +29,11 @@ export default {
   margin-top: 3rem;
   border-radius: 10px;
   box-shadow: 0 12px 6px -6px #777;
+}
+
+@media screen and (max-width: 480px) {
+  .pollContainer {
+    width: 22rem;
+  }
 }
 </style>

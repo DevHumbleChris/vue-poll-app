@@ -5,6 +5,11 @@
 </template>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Girassol&family=KoHo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Girassol&family=Permanent+Marker&family=Texturina:wght@500&family=Ubuntu&display=swap');
+#app {
+  font-family: 'KoHo', sans-serif;
+}
 .btn, a {
   border: none;
   margin-top: 10px;
