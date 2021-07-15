@@ -1,4 +1,4 @@
-# vue-poll-app
+# VUE POLL APP
 
 ## Project setup
 ```
@@ -22,4 +22,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# VUE POLL APP
